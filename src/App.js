@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './components/ForumItem';
 import Button from '@material-ui/core/Button';
+import { List, ListItem, Icon, ListItemIcon } from '@material-ui/core';
+import ForumItem from './components/ForumItem';
+import AddItemContainer from './containers/AddForumItem';
+import ForumListContainer from './containers/ForumListContainer'
 
 class App extends Component {
   render() {
@@ -15,14 +20,14 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <button>press me!
-          </button>
         <Button variant="raised" color="primary">
          Hello World
         </Button>
+        <ForumListContainer></ForumListContainer>
+          <AddItemContainer></AddItemContainer>
       </div>
     );
   }
-}
+} 
 
 export default App;
