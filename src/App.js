@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Button from '@material-ui/core/Button';
 
 class App extends Component {
   render() {
@@ -16,6 +17,9 @@ class App extends Component {
         </p>
         <button>press me!
           </button>
+        <Button variant="raised" color="primary">
+         Hello World
+        </Button>
       </div>
     );
   }
