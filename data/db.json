@@ -1,9 +1,7 @@
 {
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+    { "text": "I like cookies" },
+    { "text": "Please fetch me a coffee" },
+    { "text": "I do not like to get up early in the morning" }
+  ]
 }

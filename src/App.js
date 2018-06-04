@@ -3,10 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import './components/ForumItem';
 import Button from '@material-ui/core/Button';
-import { List, ListItem, Icon, ListItemIcon } from '@material-ui/core';
-import ForumItem from './components/ForumItem';
 import AddItemContainer from './containers/AddForumItem';
 import ForumListContainer from './containers/ForumListContainer'
+import LoadForumContainer from './containers/LoadForumContainer';
 
 class App extends Component {
   render() {
@@ -25,6 +24,7 @@ class App extends Component {
         </Button>
         <ForumListContainer></ForumListContainer>
           <AddItemContainer></AddItemContainer>
+          <LoadForumContainer></LoadForumContainer>
       </div>
     );
   }

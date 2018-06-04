@@ -1,5 +1,3 @@
-import React from 'react'
-import { addForumItem } from '../actions/forumActions'
 import { connect } from 'react-redux'
 import ForumList from '../components/ForumList'
 

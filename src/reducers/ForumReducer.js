@@ -10,6 +10,10 @@ const forumReducer = (state = {items:[]}, action) => {
                     }
                     ]
         }
+        case 'RECEIVE_FORUM_ITEMS':
+        return {
+          items: action.items
+        }
       default:
         return state
     }
