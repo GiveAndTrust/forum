@@ -1,3 +1,112 @@
+# Forum
+This is an initial test setup to get REactJS with Redux etc up and running.
+
+## Install
+These were the install actions taken (Note that not all actions are necessary for this project):
+
+-- windows --
+install visual studio code: https://code.visualstudio.com/docs/?dv=win
+install react native tools extension pack: https://marketplace.visualstudio.com/items?itemName=vsmobile.vscode-react-native
+
+install nodejs - current (64 bit msi) - eerst avast uitschakelen: https://nodejs.org/en/download/
+install yarn: https://yarnpkg.com/lang/en/docs/install/#windows-stable
+
+react devtools for chrome: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+
+-- powershell --
+npm install -g create-react-native-app
+
+cd <react base dir>
+
+create-react-native-app AwesomeProject
+cd AwesomeProject
+npm start
+
+press s and fill in phonenr (first install expo on phone)
+click link to open project in expo on the phone
+
+
+-- git bash --
+git init
+git add *
+git commit -m 'project initial'
+
+-- powershell --
+(terminate npm)
+npm install --save react-navigation
+(vulnerabilities reported:
+npm audit fix
+)
+npm start  (needed to be started twice)
+(terminate npm)
+
+-- git bash --
+git add *
+git commit -m 'navigation installed'
+
+-- powershell --
+npm install native-base --save
+
+-- git bash --
+cd ..
+mkdir nativebase
+cd nativebase
+git clone https://github.com/GeekyAnts/NativeBase-KitchenSink.git
+
+-- powershell --
+cd ..\nativebase\NativeBase-KitchenSink\
+git checkout CRNA     (jep, can be done in powershell (win10))
+
+
+-- ReactJS --
+-- powershell --
+cd <basedir>
+npx create-react-app forum
+npm start
+git init
+git add *
+git commit -m initial
+(terminate npm)
+npm install @material-ui/core
+npm install @material-ui/icons
+include in public/index.html:
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+npm start
+
+git add -A
+git commit -m 'material included'
+
+
+-- mock server --
+npm install -g json-server
+mkdir data
+create a db.json file in ./data
+json-server --watch data/db.json --port 8088
+
+
+-- redux --
+npm install --save ajv    (after being warned by the redux install that this dependency was missing)
+npm install --save redux
+npm install --save react-redux
+npm install --save-dev redux-devtools
+npm install --save redux-thunk
+
+-- polyfill for fetch support in IE --
+npm install whatwg-fetch --save
+
+## run
+From the root folder:
+
+Spin up the mock server:
+json-server --watch data/db.json --port 8088
+
+Then run:
+npm start
+
+## other info
+The info below was generated.
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -2442,5 +2551,6 @@ In the future, we might start automatically compiling incompatible third-party m
 ## Something Missing?
 
 If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md)
-#   f o r u m  
+#   f o r u m 
+ 
  
