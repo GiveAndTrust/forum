@@ -6,9 +6,9 @@ import { Provider } from 'react-redux'
 import thunk from 'redux-thunk';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import forumReducer from './reducers/ForumReducer'
+import rootReducer from './reducers/RootReducer';
 
-const store = createStore(forumReducer, applyMiddleware(thunk))
+const store = createStore(rootReducer, applyMiddleware(thunk))
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();

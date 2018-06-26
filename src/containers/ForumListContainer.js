@@ -3,7 +3,7 @@ import ForumList from '../components/ForumList'
 
 const mapStateToProps = state => {
     return {
-      items: state.items
+      items: state.forum.items
       }
   }
 

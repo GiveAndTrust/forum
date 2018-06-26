@@ -3,9 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 import './components/ForumItem';
 import Button from '@material-ui/core/Button';
-import AddItemContainer from './containers/AddForumItem';
+import AddItemContainer from './containers/AddForumItemContainer';
 import ForumListContainer from './containers/ForumListContainer'
 import LoadForumContainer from './containers/LoadForumContainer';
+import DonationFormContainer from './components/DonationForm';
+import OpenDonationFormButtonContainer from './components/OpenDonationFormButton';
 
 class App extends Component {
   render() {
@@ -25,6 +27,8 @@ class App extends Component {
         <ForumListContainer></ForumListContainer>
           <AddItemContainer></AddItemContainer>
           <LoadForumContainer></LoadForumContainer>
+          <OpenDonationFormButtonContainer />
+        <DonationFormContainer></DonationFormContainer>
       </div>
     );
   }
